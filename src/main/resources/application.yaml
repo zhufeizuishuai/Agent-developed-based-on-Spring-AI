@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: heima-ai
+  ai:
+    ollama:
+      base-url: 模型路径
+      chat:
+        model: 你选择的聊天机器人模型
+    openai:
+      base-url: 模型路径
+      api-key: 你的密钥  # 确保环境变量已配置正确的API-KEY
+      chat:
+        options: # 必须有options层级
+          model: 你选择的模型  # 通义千问模型名
+          temperature: 0.8  # 可选：增加随机性
+          max-tokens: 2000  # 可选：增大响应长度
+      embedding:
+        options:
+          model: 你选择的向量模型
+          dimensions: 1024
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: 你的数据库地址
+    username: 你的数据库用户名
+    password: 你的数据库密码
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  type-aliases-package: com.itheima.ai.entity.po
+logging:
+  level:
+    org.springframework.ai: DEBUG
+    com.itheima.ai: DEBUG
+    org.mybatis: DEBUG
+    org.springframework.jdbc: DEBUG
+
+
