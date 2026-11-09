@@ -1,4 +1,4 @@
-# Heima AI - 智能对话服务平台
+# AI - 智能对话服务平台
 
 基于 Spring Boot 和 Spring AI 构建的智能对话服务平台，支持多种AI模型、PDF文档问答、多模态对话等功能。
 
